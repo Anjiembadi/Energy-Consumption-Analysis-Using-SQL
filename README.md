@@ -1,38 +1,42 @@
-# 📊 Energy Consumption Analysis (SQL Project)
+# 🌍 Energy Consumption Analysis (SQL Project)
 
 ![Made With](https://img.shields.io/badge/Made%20With-MySQL-blue)
 ![Project](https://img.shields.io/badge/Project-SQL%20Analytics-black)
 ![Type](https://img.shields.io/badge/Type-Database-green)
 ![Open Source](https://img.shields.io/badge/Open%20Source-Yes-orange)
 
-> A SQL-based Energy Consumption Analysis system that analyzes global energy usage, GDP trends, and CO₂ emissions using relational databases and advanced SQL queries.
+> A SQL-based data analysis project that examines global energy consumption, production, GDP, population, and CO₂ emissions to derive meaningful insights using relational databases and advanced SQL queries.
 
 ---
 
 ## 📌 Overview
 
-The Energy Consumption Analysis System is a structured SQL-based project that focuses on analyzing global energy trends.
+The **Energy Consumption Analysis System** is a structured SQL-based project designed to analyze global trends in energy usage and environmental impact.
 
-It enables:
-- Energy consumption & production analysis  
-- GDP and economic comparisons  
-- CO₂ emission tracking  
+It enables efficient analysis of:
+- Country-wise energy consumption and production  
+- GDP and economic growth patterns  
+- CO₂ emissions and sustainability metrics  
 
-This project demonstrates SQL concepts like joins, aggregations, and data modeling.
+This project demonstrates strong SQL concepts such as **data modeling, joins, aggregations, window functions, and trend analysis**, helping derive real-world insights for **sustainable decision-making**.
 
 ---
 
 ## 🎯 Objective
 
-- Analyze global energy consumption patterns  
-- Compare GDP with emissions  
-- Calculate per capita metrics  
-- Identify sustainable countries  
+To build a comprehensive analytical database that:
+
+- Analyzes global energy consumption and production trends  
+- Compares GDP growth with energy usage and emissions  
+- Calculates per capita and ratio-based metrics  
+- Identifies high-performing and environmentally efficient countries  
+- Supports data-driven insights for sustainability  
 
 ---
 
-## 🧠 Database Design
+## 🧠 ER Diagram Overview
 
+### 📊 Entities:
 - Country  
 - Population  
 - GDP  
@@ -40,33 +44,46 @@ This project demonstrates SQL concepts like joins, aggregations, and data modeli
 - Production  
 - Emission  
 
+### 🔗 Relationships:
+- Country → Population (One-to-Many)  
+- Country → GDP (One-to-Many)  
+- Country → Consumption (One-to-Many)  
+- Country → Production (One-to-Many)  
+- Country → Emission (One-to-Many)  
+
+---
+
+## 🧩 Database Design
+
+| Table        | Primary Key     | Foreign Key   | Key Attributes |
+|-------------|----------------|--------------|----------------|
+| Country     | country_id     | —            | country_name |
+| Population  | population_id  | country_id   | year, population_value |
+| GDP         | gdp_id         | country_id   | year, gdp_value |
+| Consumption | consumption_id | country_id   | year, energy_type, consumption |
+| Production  | production_id  | country_id   | year, energy_type, production |
+| Emission    | emission_id    | country_id   | year, energy_type, emission |
+
 ---
 
 ## ⚙️ Tech Stack
 
-- MySQL  
-- SQL  
-- Data Modeling  
-- Joins & Aggregations  
+- **Database:** MySQL  
+- **Language:** SQL  
+
+### Concepts Used:
+- Joins  
+- Subqueries  
+- CTEs (WITH clause)  
+- Window Functions  
+- Aggregations  
+- Data Modeling (Star Schema)  
 
 ---
 
-## 💡 Key Insights
+## 🚀 Project Setup
 
-- High GDP countries consume more energy  
-- Emissions strongly correlate with industrial growth  
-- Some countries improved per capita emissions  
-
----
-
-## 🚀 Future Enhancements
-
-- Power BI Dashboard  
-- Machine Learning Predictions  
-- Streamlit Web App  
-
----
-
-## 🏷️ Tags
-
-SQL • MySQL • Data Analysis • Energy • Sustainability • CO2 • GDP
+### 1️⃣ Create Database
+```sql
+CREATE DATABASE energy_consumption_analysis;
+USE energy_consumption_analysis;

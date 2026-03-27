@@ -1,160 +1,72 @@
-🌍 Energy Consumption Analysis (SQL Project)
+# 📊 Energy Consumption Analysis (SQL Project)
 
-Made with MySQL | Data Analytics Project | Open Source
+![Made With](https://img.shields.io/badge/Made%20With-MySQL-blue)
+![Project](https://img.shields.io/badge/Project-SQL%20Analytics-black)
+![Type](https://img.shields.io/badge/Type-Database-green)
+![Open Source](https://img.shields.io/badge/Open%20Source-Yes-orange)
 
-A SQL-based data analysis project that examines global energy consumption, production, GDP, population, and CO₂ emissions to derive meaningful insights using relational databases and advanced SQL queries.
+> A SQL-based Energy Consumption Analysis system that analyzes global energy usage, GDP trends, and CO₂ emissions using relational databases and advanced SQL queries.
 
-📌 Overview
+---
 
-The Energy Consumption Analysis System is a structured SQL project designed to analyze global trends in energy usage and environmental impact.
+## 📌 Overview
 
-It enables efficient analysis of:
+The Energy Consumption Analysis System is a structured SQL-based project that focuses on analyzing global energy trends.
 
-Country-wise energy consumption and production
-GDP and economic growth patterns
-CO₂ emissions and sustainability metrics
+It enables:
+- Energy consumption & production analysis  
+- GDP and economic comparisons  
+- CO₂ emission tracking  
 
-This project demonstrates strong SQL concepts like data modeling, joins, aggregations, window functions, and trend analysis, helping derive real-world insights for sustainable decision-making.
+This project demonstrates SQL concepts like joins, aggregations, and data modeling.
 
-🎯 Objective
+---
 
-To build a comprehensive analytical database that:
+## 🎯 Objective
 
-Analyzes global energy consumption and production trends
-Compares GDP growth with energy usage and emissions
-Calculates per capita and ratio-based metrics
-Identifies high-performing and environmentally efficient countries
-Supports data-driven insights for sustainability
+- Analyze global energy consumption patterns  
+- Compare GDP with emissions  
+- Calculate per capita metrics  
+- Identify sustainable countries  
 
-🧠 ER Diagram Overview
-📊 Entities:
-Country
-Population
-GDP
-Consumption
-Production
-Emission
+---
 
-🔗 Relationships:
-Country → Population (One-to-Many)
-Country → GDP (One-to-Many)
-Country → Consumption (One-to-Many)
-Country → Production (One-to-Many)
-Country → Emission (One-to-Many)
+## 🧠 Database Design
 
-🧩 Database Design
-Table	Primary Key	Foreign Key	Key Attributes
-Country	country_id	—	country_name
-Population	population_id	country_id	year, population_value
-GDP	gdp_id	country_id	year, gdp_value
-Consumption	consumption_id	country_id	year, energy_type, consumption
-Production	production_id	country_id	year, energy_type, production
-Emission	emission_id	country_id	year, energy_type, emission
-⚙️ Tech Stack
-Database: MySQL
-Language: SQL
-Concepts Used:
-Joins
-Subqueries
-CTEs (WITH clause)
-Window Functions
-Aggregations
-Data Modeling (Star Schema)
+- Country  
+- Population  
+- GDP  
+- Consumption  
+- Production  
+- Emission  
 
-🚀 Project Setup
+---
 
-1️⃣ Create Database
-CREATE DATABASE energy_consumption_analysis;
-USE energy_consumption_analysis;
+## ⚙️ Tech Stack
 
-2️⃣ Create Tables (Example)
-CREATE TABLE Country (
-  country_id INT PRIMARY KEY AUTO_INCREMENT,
-  country_name VARCHAR(100) UNIQUE
-);
+- MySQL  
+- SQL  
+- Data Modeling  
+- Joins & Aggregations  
 
-CREATE TABLE GDP (
-  gdp_id INT PRIMARY KEY AUTO_INCREMENT,
-  country_id INT,
-  year INT,
-  value DECIMAL(15,2),
-  FOREIGN KEY (country_id) REFERENCES Country(country_id)
-);
+---
 
-3️⃣ Insert Sample Data
-INSERT INTO Country (country_name)
-VALUES ('India'), ('USA'), ('China');
+## 💡 Key Insights
 
-💡 Key SQL Queries & Insights
+- High GDP countries consume more energy  
+- Emissions strongly correlate with industrial growth  
+- Some countries improved per capita emissions  
 
-🌍 General & Comparative Analysis
+---
 
-SELECT country, SUM(emission) AS total_emission
-FROM emission
-GROUP BY country;
+## 🚀 Future Enhancements
 
-Insight: Identifies countries with highest emissions globally.
+- Power BI Dashboard  
+- Machine Learning Predictions  
+- Streamlit Web App  
 
-📈 Trend Analysis
-SELECT year, SUM(emission) AS global_emission
-FROM emission
-GROUP BY year;
+---
 
-Insight: Tracks global emission growth over time.
+## 🏷️ Tags
 
-⚖️ Per Capita Analysis
-SELECT country,
-SUM(emission)/population AS emission_per_capita
-FROM emission e
-JOIN population p ON e.country = p.country;
-
-Insight: Helps compare environmental efficiency across countries.
-
-💰 GDP vs Energy Consumption
-SELECT country,
-SUM(consumption)/SUM(gdp) AS consumption_to_gdp_ratio
-FROM consumption c
-JOIN gdp g ON c.country = g.country;
-
-Insight: Measures energy dependency of economies.
-
-🔥 Advanced Analysis (Trend Improvement)
--- Countries reducing per capita emissions
-WITH trend AS (
-  SELECT country, year,
-  SUM(emission)/population AS per_capita
-  FROM emission e
-  JOIN population p ON e.country = p.country
-)
-SELECT * FROM trend;
-
-Insight: Identifies sustainable and improving countries.
-
-🧰 Challenges Faced
-Handling inconsistent column names (country vs countries)
-Managing large datasets across multiple years
-Writing complex joins across 5+ tables
-Ensuring correct time-based comparisons
-Avoiding data duplication and incorrect aggregations
-✅ Outcomes
-Built a fully normalized analytical database
-Performed real-world data analysis using SQL
-Derived insightful trends on energy & emissions
-Developed strong understanding of data relationships and metrics
-Created a portfolio-ready data analytics project
-🚀 Future Enhancements
-Integrate with Power BI / Tableau dashboards
-Add predictive modeling (ML) for emission forecasting
-Build a Streamlit dashboard for visualization
-Deploy database on AWS RDS / Azure SQL
-🏷️ Tags
-
-SQL • MySQL • Data Analysis • Energy Analytics • Sustainability • GDP Analysis • CO2 Emissions • Data Science • Relational Database • Portfolio Project
-
-📜 License
-
-This project is for educational and portfolio purposes only. Unauthorized use or reproduction is not permitted without permission.
-
-🙌 Acknowledgments
-
-Special thanks to Innomatics Research Labs for guidance and support throughout this project.
+SQL • MySQL • Data Analysis • Energy • Sustainability • CO2 • GDP

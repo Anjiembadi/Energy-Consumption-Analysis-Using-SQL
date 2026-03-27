@@ -25,6 +25,7 @@ Compares GDP growth with energy usage and emissions
 Calculates per capita and ratio-based metrics
 Identifies high-performing and environmentally efficient countries
 Supports data-driven insights for sustainability
+
 🧠 ER Diagram Overview
 📊 Entities:
 Country
@@ -33,12 +34,14 @@ GDP
 Consumption
 Production
 Emission
+
 🔗 Relationships:
 Country → Population (One-to-Many)
 Country → GDP (One-to-Many)
 Country → Consumption (One-to-Many)
 Country → Production (One-to-Many)
 Country → Emission (One-to-Many)
+
 🧩 Database Design
 Table	Primary Key	Foreign Key	Key Attributes
 Country	country_id	—	country_name
@@ -57,10 +60,13 @@ CTEs (WITH clause)
 Window Functions
 Aggregations
 Data Modeling (Star Schema)
+
 🚀 Project Setup
+
 1️⃣ Create Database
 CREATE DATABASE energy_consumption_analysis;
 USE energy_consumption_analysis;
+
 2️⃣ Create Tables (Example)
 CREATE TABLE Country (
   country_id INT PRIMARY KEY AUTO_INCREMENT,
@@ -74,11 +80,15 @@ CREATE TABLE GDP (
   value DECIMAL(15,2),
   FOREIGN KEY (country_id) REFERENCES Country(country_id)
 );
+
 3️⃣ Insert Sample Data
 INSERT INTO Country (country_name)
 VALUES ('India'), ('USA'), ('China');
+
 💡 Key SQL Queries & Insights
+
 🌍 General & Comparative Analysis
+
 SELECT country, SUM(emission) AS total_emission
 FROM emission
 GROUP BY country;

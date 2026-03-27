@@ -68,19 +68,7 @@ To build a comprehensive analytical database that:
 * Aggregations
 * Data Modeling (Star Schema)
 
----
 
-## 📂 Dataset
-
-You can use publicly available datasets such as:
-
-* 🌐 https://www.kaggle.com/datasets
-* 🌐 https://ourworldindata.org/energy
-* 🌐 https://data.worldbank.org
-
-> Includes data on energy consumption, GDP, emissions, and population across countries.
-
----
 
 ## 🚀 Project Setup
 
@@ -121,7 +109,6 @@ VALUES ('India'), ('USA'), ('China');
 
 ---
 
-## 💡 Key SQL Queries & Insights
 
 ### 🌍 General & Comparative Analysis
 

@@ -164,7 +164,7 @@ GROUP BY g.country;
 
 ---
 
-### 🔥 Advanced Analysis (Trend Improvement)
+### Advanced Analysis (Trend Improvement)
 
 ```sql
 WITH trend AS (

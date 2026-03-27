@@ -36,8 +36,7 @@ To build a comprehensive analytical database that:
 
 ## 🧠 ER Diagram
 
-![ER Diagram](https://via.placeholder.com/900x400.png?text=Energy+Consumption+ER+Diagram)
-
+![Energy Consumption ER Diagram](images/Energy Consumption Analysis Schema.png)
 > 📌 Replace this image with your own ER diagram screenshot (from MySQL Workbench / Draw.io)
 
 ---

@@ -37,9 +37,7 @@ To build a comprehensive analytical database that:
 
 ## 🧠 ER Diagram
 
-<p align="center">
-  <img src="images/er_diagram.png" alt="ER Diagram" width="800"/>
-</p>
+![ER Diagram](er_diagram.png) 
 
 ---
 

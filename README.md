@@ -86,13 +86,15 @@ You can use publicly available datasets such as:
 CREATE DATABASE energy_consumption_analysis;
 USE energy_consumption_analysis;
 ```
-
+```sql
 ### 2️⃣ Create Tables (Example)
 CREATE TABLE Country (
   country_id INT PRIMARY KEY AUTO_INCREMENT,
   country_name VARCHAR(100) UNIQUE
 );
+```
 
+```sql
 CREATE TABLE GDP (
   gdp_id INT PRIMARY KEY AUTO_INCREMENT,
   country_id INT,
@@ -100,10 +102,12 @@ CREATE TABLE GDP (
   value DECIMAL(15,2),
   FOREIGN KEY (country_id) REFERENCES Country(country_id)
 );
-
+```
+```sql
 ### 3️⃣ Insert Sample Data
 INSERT INTO Country (country_name)
 VALUES ('India'), ('USA'), ('China');
+```
 
 ## 💡 Key SQL Queries & Insights
 ## 🌍 General & Comparative Analysis

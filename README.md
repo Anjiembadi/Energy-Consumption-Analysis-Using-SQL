@@ -38,7 +38,7 @@ To build a comprehensive analytical database that:
 ## 🧠 ER Diagram
 
 <p align="center">
-  <img src="images/Energy%20Consumption%20Analysis%20Schema.png" alt="ER Diagram" width="800"/>
+  <img src="images/er_diagram.png" alt="ER Diagram" width="800"/>
 </p>
 
 ---
